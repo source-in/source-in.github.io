@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saurabh Sawant - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2ecc71;
+        --dark: #2c3e50;
+        --light: #ecf0f1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background-color: white;
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 0.8s;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Hero Section */
+      #hero {
+        text-align: center;
+        padding-top: 8rem;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.2em;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+
+      .contact-info a {
+        color: var(--dark);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-info a:hover {
+        color: var(--primary);
+      }
+
+      /* Skills */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .skill-category {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+
+      /* Experience & Education */
+      .timeline {
+        border-left: 2px solid var(--primary);
+        padding-left: 2rem;
+        margin: 2rem 0;
+      }
+
+      .timeline-item {
+        margin-bottom: 2rem;
+        position: relative;
+        padding: 1.5rem;
+        background: var(--light);
+        border-radius: 8px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -2.7rem;
+        top: 1.5rem;
+        width: 1rem;
+        height: 1rem;
+        background: var(--primary);
+        border-radius: 50%;
+      }
+
+      /* Projects */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        padding: 1.5rem;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          gap: 1rem;
+          font-size: 0.9rem;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <section id="hero">
+        <h1 class="hero-title">SAURABH SAWANT</h1>
+        <div class="contact-info">
+          <a href="tel:+1267-591-4113"
+            ><i class="fas fa-phone"></i> +1 267-591-4113</a
+          >
+          <a href="mailto:sss448@drexel.edu"
+            ><i class="fas fa-envelope"></i> sss448@drexel.edu</a
+          >
+          <a
+            href="https://www.linkedin.com/in/saurabh-sawant-55baa5159/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a href="https://github.com/source-in" target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+        </div>
+        <p class="hero-subtitle">
+          Experienced Software Engineer specializing in Full-Stack Development &
+          Machine Learning
+        </p>
+        <p>
+          Proven track record in developing and deploying scalable web
+          applications, enhancing user engagement
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <p>JavaScript, Python, Dart, HTML, CSS</p>
+          </div>
+          <div class="skill-category">
+            <h3>Frameworks</h3>
+            <p>React, Node.js, Flask, Django, Flutter, PyTorch</p>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <p>AWS, Google Cloud, Firebase, Docker, Jenkins</p>
+          </div>
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <p>PostgreSQL, MongoDB, MySQL</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Teaching Assistant - Drexel University</h3>
+            <p>August 2024 - Present</p>
+            <ul>
+              <li>
+                Enhanced student understanding through revised course materials
+              </li>
+              <li>Facilitated hands-on labs and doubt resolution</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Software Engineer - Spintly Inc</h3>
+            <p>2020 - 2024</p>
+            <ul>
+              <li>
+                Boosted operational efficiency by 30% with analytics dashboard
+              </li>
+              <li>Improved user experience for 10,000+ active users</li>
+              <li>
+                Implemented CI/CD pipelines reducing deployment time by 40%
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Natural Language to SQL Generator</h3>
+            <p>Fine-tuned Meta-Llama-3.1-8B model for Text2SQL conversion</p>
+            <p><strong>Tech:</strong> Python, Streamlit, Transformers</p>
+          </div>
+          <div class="project-card">
+            <h3>Malaria Cell Detection</h3>
+            <p>Custom ResNet50 CNN with 97.8% accuracy</p>
+            <p><strong>Tech:</strong> Python, CNN, Streamlit</p>
+          </div>
+          <div class="project-card">
+            <h3>College Blogging Platform</h3>
+            <p>Community-driven platform with real-time features</p>
+            <p><strong>Tech:</strong> React, Node.js, MongoDB</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>MSc Computer Science</h3>
+            <p>Drexel University • 2024 - 2025</p>
+            <p>GPA: 3.9/4.0</p>
+            <p>Coursework: AI, Machine Learning, UX/UI, Algorithms</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
